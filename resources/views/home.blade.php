@@ -1,23 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
+    <article id="head">
+        <div class="container-md">
+            <div id="content">
+                <h1 id="title">Kucing Pasir</h1>
+                <p id="description">
+                    Kucing pasir adalah kucing yang dapat menjadi tempat tinggal bagi kucing yang
+                    membutuhkan kamar yang nyaman. Kucing pasir dapat menjadi tempat tinggal
+                    bagi kucing yang membutuhkan kamar yang nyaman. Kucing pasir dapat menjadi
+                    tempat tinggal bagi kucing yang membutuhkan kamar yang nyaman. Kucing pasir
+                    dapat menjadi tempat tinggal bagi kucing yang membutuhkan kamar yang nyaman.
+                </p>
+                <button class="">kenali kami lebih baik</button>
             </div>
         </div>
-    </div>
-</div>
+    </article>
 @endsection
