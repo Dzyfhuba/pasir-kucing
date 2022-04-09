@@ -11293,6 +11293,25 @@ body {
 
 /* SCSS RGB */
 /* SCSS Gradient */
+nav.navbar-color .navbar-brand {
+  color: black;
+  font-weight: bolder;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+nav.navbar-color .nav-item {
+  padding: 0 20px;
+  font-size: 13px;
+}
+nav.navbar-color .nav-item .nav-link {
+  color: black;
+  text-transform: uppercase;
+  padding: 0;
+}
+nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link.active {
+  color: rgb(250, 163, 13);
+}
+
 .navbar-nav .guest {
   display: none;
 }
@@ -11341,7 +11360,6 @@ body {
   font-weight: bold;
   color: rgb(244, 129, 63);
   padding: 0 50px;
-  text-decoration: underline;
 }
 #service #list {
   /* NOTE: style the scrollbar (CHROME/EDGE only) */
@@ -11392,5 +11410,67 @@ body {
   font-weight: bold;
 }
 #service #list::-webkit-scrollbar {
+  display: none;
+}
+
+#product {
+  display: block;
+  padding: 30px 0;
+}
+#product #title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(244, 129, 63);
+  padding: 0 50px;
+}
+#product #list {
+  /* NOTE: style the scrollbar (CHROME/EDGE only) */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 30%;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+@media only screen and (max-width: 767px) {
+  #product #list {
+    grid-auto-columns: 100%;
+  }
+}
+#product #list .item {
+  width: 100%;
+  height: auto;
+  scroll-snap-align: start;
+  scroll-padding-inline: 5px;
+  margin: 15px;
+  padding: 30px;
+  overflow: hidden;
+  z-index: 1;
+}
+#product #list .item .wrapper {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+#product #list .item .wrapper .title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+#product #list .item .wrapper .description {
+  font-size: 1rem;
+  text-align: center;
+}
+#product #list .item .wrapper .btn-color {
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#product #list::-webkit-scrollbar {
   display: none;
 }
