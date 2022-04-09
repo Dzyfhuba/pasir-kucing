@@ -11332,51 +11332,65 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width : 600px) {
-  #content {
-    width: 100%;
-  }
-}
 #service {
   display: block;
+  padding: 30px 0;
 }
 #service #title {
   font-size: 2rem;
   font-weight: bold;
   color: rgb(244, 129, 63);
+  padding: 0 50px;
+  text-decoration: underline;
 }
 #service #list {
-  display: flex;
   /* NOTE: style the scrollbar (CHROME/EDGE only) */
-}
-#service #list .item {
-  width: 400px;
-  float: left;
-}
-#service #list .cards {
-  overscroll-behavior-inline: contain;
-  -ms-scroll-snap-type: inline mandatory;
-      scroll-snap-type: inline mandatory;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 50%;
+  grid-auto-columns: 30%;
   overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
-#service #list .cards > div {
+@media only screen and (max-width: 767px) {
+  #service #list {
+    grid-auto-columns: 100%;
+  }
+}
+#service #list .item {
+  width: 100%;
+  height: auto;
   scroll-snap-align: start;
   scroll-padding-inline: 5px;
-  margin: 5px;
-  padding: 5px;
-  background-color: white;
-  color: dimgray;
+  margin: 15px;
+  padding: 30px;
   overflow: hidden;
+  z-index: 1;
 }
-#service #list .cards > div > img {
-  inline-size: 100%;
-  aspect-ratio: 16/9;
-  -o-object-fit: cover;
-     object-fit: cover;
+#service #list .item .wrapper {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
-#service #list .cards::-webkit-scrollbar {
+#service #list .item .wrapper .title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+#service #list .item .wrapper .description {
+  font-size: 1rem;
+  text-align: center;
+}
+#service #list .item .wrapper .btn-color {
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#service #list::-webkit-scrollbar {
   display: none;
 }

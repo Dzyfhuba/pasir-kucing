@@ -1,4 +1,4 @@
-#head{
+#head {
     background-image: url("/storage/decoration/right-bg-decor.png"), url("/storage/decoration/kucingoren.png");
     background-size: contain, auto 70%;
     background-repeat: no-repeat;
@@ -7,22 +7,18 @@
     width: 100%;
     display: flex;
     align-items: center;
-
     #content {
         width: 50%;
         color: $mango-tango;
-
         #title {
             font-size: 5rem;
             font-weight: bold;
         }
-
         #description {
             color: black;
             font-size: 1rem;
             font-weight: normal;
         }
-
         button {
             background-color: $orange-web;
             color: $white;
@@ -34,11 +30,5 @@
             margin-top: 1rem;
             cursor: pointer;
         }
-    }
-}
-
-@media #{$media-mobile}{
-    #content{
-        width: 100%;
     }
 }
