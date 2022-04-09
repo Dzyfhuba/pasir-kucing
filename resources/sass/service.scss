@@ -1,0 +1,46 @@
+#service {
+    display: block;
+    #title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $mango-tango;
+    }
+    #list {
+        display: flex;
+        .item {
+            width: 400px;
+            float: left;
+        }
+        $color_1: dimgray;
+        $background-color_1: white;
+        $background-color_2: black;
+        $background-color_3: lightgray;
+        /* NOTE: style the scrollbar (CHROME/EDGE only) */
+        .cards {
+            overscroll-behavior-inline: contain;
+            scroll-snap-type: inline mandatory;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 50%;
+            overflow-x: auto;
+            >div {
+                scroll-snap-align: start;
+                scroll-padding-inline: 5px;
+                margin: 5px;
+                padding: 5px;
+                background-color: $background-color_1;
+                color: $color_1;
+                overflow: hidden;
+                >img {
+                    inline-size: 100%;
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                }
+            }
+            // hide scroll bar
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+}

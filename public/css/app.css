@@ -11303,13 +11303,12 @@ body {
   background-repeat: no-repeat;
   background-position: right center, right bottom;
   height: 100vh;
-  width: 100vw;
-  position: absolute;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 #head #content {
-  width: 50vw;
+  width: 50%;
   color: rgb(244, 129, 63);
 }
 #head #content #title {
@@ -11335,6 +11334,49 @@ body {
 
 @media only screen and (max-width : 600px) {
   #content {
-    width: 100vw;
+    width: 100%;
   }
+}
+#service {
+  display: block;
+}
+#service #title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(244, 129, 63);
+}
+#service #list {
+  display: flex;
+  /* NOTE: style the scrollbar (CHROME/EDGE only) */
+}
+#service #list .item {
+  width: 400px;
+  float: left;
+}
+#service #list .cards {
+  overscroll-behavior-inline: contain;
+  -ms-scroll-snap-type: inline mandatory;
+      scroll-snap-type: inline mandatory;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 50%;
+  overflow-x: auto;
+}
+#service #list .cards > div {
+  scroll-snap-align: start;
+  scroll-padding-inline: 5px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  color: dimgray;
+  overflow: hidden;
+}
+#service #list .cards > div > img {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#service #list .cards::-webkit-scrollbar {
+  display: none;
 }
