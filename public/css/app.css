@@ -11484,3 +11484,10 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
 #product #list::-webkit-scrollbar {
   display: none;
 }
+
+#about .wrapper {
+  background-color: url("/storage/decoration/manycat.png");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
