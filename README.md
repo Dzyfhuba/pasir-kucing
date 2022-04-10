@@ -1,4 +1,4 @@
-# Himatif Website
+# Pasir Kucing Website
 Built using laravel 9.
 ## Installation Procedure
 ### The prerequisites needed are as follows:
