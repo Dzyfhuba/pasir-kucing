@@ -3,7 +3,7 @@
         Produk Siap Jual
     </h1>
     <div id="list">
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                 <p class="description">
@@ -14,7 +14,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -25,7 +25,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -36,7 +36,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -47,7 +47,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
@@ -58,7 +58,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                 <p class="description">
@@ -69,7 +69,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -80,7 +80,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -91,7 +91,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -102,7 +102,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
@@ -113,7 +113,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                 <p class="description">
@@ -124,7 +124,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -135,7 +135,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -146,7 +146,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -157,7 +157,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
@@ -168,7 +168,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                 <p class="description">
@@ -179,7 +179,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -190,7 +190,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -201,7 +201,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -212,7 +212,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
@@ -223,7 +223,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -234,7 +234,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -245,7 +245,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -256,7 +256,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
@@ -267,7 +267,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                 <p class="description">
@@ -278,7 +278,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -289,7 +289,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -300,7 +300,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -311,7 +311,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
@@ -322,7 +322,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                 <p class="description">
@@ -333,7 +333,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -344,7 +344,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -355,7 +355,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -366,7 +366,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
@@ -377,7 +377,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Lorem ipsum dolor sit amet.</h1>
                 <p class="description">
@@ -388,7 +388,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Quisquam temporibus repudiandae reprehenderit modi!</h1>
                 <p class="description">
@@ -399,7 +399,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Mollitia, nemo eos. Incidunt, laudantium?</h1>
                 <p class="description">
@@ -410,7 +410,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Ab eum eaque fugiat ipsa?</h1>
                 <p class="description">
@@ -421,7 +421,7 @@
                 <a href="#" class="btn btn-color rounded-pill">Cari Tahu Lebih</a>
             </div>
         </div>
-        <div class="item">
+        <div class="item" data-image="{{ asset('storage/decoration/smudge_lord.jpg') }}">
             <div class="wrapper">
                 <h1 class="title">Labore deserunt porro laboriosam. Quam?</h1>
                 <p class="description">
