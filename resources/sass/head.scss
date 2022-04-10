@@ -7,6 +7,12 @@
     width: 100%;
     display: flex;
     align-items: center;
+    @include md-screen {
+        background-size: contain, 50% auto;
+    }
+    @include sm-screen {
+        background-size: contain, 80% auto;
+    }
     #content {
         width: 50%;
         color: $mango-tango;

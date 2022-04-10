@@ -11326,6 +11326,16 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 992px) {
+  #head {
+    background-size: contain, 50% auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #head {
+    background-size: contain, 80% auto;
+  }
+}
 #head #content {
   width: 50%;
   color: rgb(244, 129, 63);
