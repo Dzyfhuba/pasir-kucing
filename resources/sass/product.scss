@@ -17,7 +17,7 @@
         @include sm-screen {
             grid-auto-columns: 100%;
         }
-        .item {
+        .wrapper {
             width: 100%;
             height: auto;
             scroll-snap-align: start;
@@ -26,7 +26,7 @@
             padding: 30px;
             overflow: hidden;
             z-index: 1;
-            .wrapper {
+            .card {
                 box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
                 display: flex;
                 flex-direction: column;
