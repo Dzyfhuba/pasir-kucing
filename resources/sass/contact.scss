@@ -1,0 +1,30 @@
+#contact {
+    margin: 40px 0;
+    .title {
+        color: $mango-tango;
+        margin-bottom: 70px;
+    }
+    .content {
+        background-color: $mango-tango;
+        padding: 20px 60px;
+        display: flex;
+        justify-content: space-between;
+        >.card {
+            width: 30%;
+            img {
+                width: 70%;
+                height: auto;
+                align-self: center;
+                padding-top: 40px;
+            }
+            .card-body {
+                text-align: center;
+            }
+        }
+        >.all {
+            border-top: 5px solid $mango-tango;
+            margin-top: -50px;
+            margin-bottom: 20px;
+        }
+    }
+}

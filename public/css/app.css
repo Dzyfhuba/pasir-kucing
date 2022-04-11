@@ -11485,9 +11485,45 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   display: none;
 }
 
-#about .wrapper {
-  background-color: url("/storage/decoration/manycat.png");
+#about {
+  background-image: url("/storage/decoration/manycat.png");
   background-size: cover;
   background-position: center;
-  height: 400px;
+  color: rgb(253, 253, 253);
+  text-align: center;
+  padding: 60px 20px;
+}
+#about .title {
+  font-weight: bold;
+}
+
+#contact {
+  margin: 40px 0;
+}
+#contact .title {
+  color: rgb(244, 129, 63);
+  margin-bottom: 70px;
+}
+#contact .content {
+  background-color: rgb(244, 129, 63);
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+}
+#contact .content > .card {
+  width: 30%;
+}
+#contact .content > .card img {
+  width: 70%;
+  height: auto;
+  align-self: center;
+  padding-top: 40px;
+}
+#contact .content > .card .card-body {
+  text-align: center;
+}
+#contact .content > .all {
+  border-top: 5px solid rgb(244, 129, 63);
+  margin-top: -50px;
+  margin-bottom: 20px;
 }

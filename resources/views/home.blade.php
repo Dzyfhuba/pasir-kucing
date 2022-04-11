@@ -4,7 +4,8 @@
     @include('home.head')
     @include('home.service')
     @include('home.product')
+    @include('home.about')
     @include('home.portfolio')
     @include('home.counter')
-    @include('home.about')
+    @include('home.contact')
 @endsection
