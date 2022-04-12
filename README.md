@@ -10,11 +10,11 @@ Built using laravel 9.
 ### Installation steps:
 1. Clone project from [this](https://github.com/Dzyfhuba/kucing-ali.git) github repository
 ```shell
-git clone https://github.com/Dzyfhuba/kucing-ali.git
+git clone https://github.com/Dzyfhuba/pasir-kucing.git
 ```
 2. Change directory
 ```shell
-cd kucing-ali
+cd pasir-kucing
 ```
 3. Install Composer Dependencies
 ```shell
