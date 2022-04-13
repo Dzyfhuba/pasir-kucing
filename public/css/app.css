@@ -11498,7 +11498,13 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
 }
 
 #contact {
-  margin: 40px 0;
+  background-image: url("/storage/decoration/footer-bg.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 0.1px solid #000;
+  height: 93.5vh;
+  width: 100%;
 }
 #contact .title {
   color: rgb(244, 129, 63);
@@ -11526,4 +11532,10 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   border-top: 5px solid rgb(244, 129, 63);
   margin-top: -50px;
   margin-bottom: 20px;
+}
+
+.auth-header-color {
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+  font-weight: bold;
 }

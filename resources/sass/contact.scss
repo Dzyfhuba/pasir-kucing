@@ -1,5 +1,11 @@
 #contact {
-    margin: 40px 0;
+    background-image: url("/storage/decoration/footer-bg.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0.1px solid #000;
+    height: 93.5vh;
+    width: 100%;
     .title {
         color: $mango-tango;
         margin-bottom: 70px;
