@@ -1,9 +1,40 @@
-.bg-sidebar {
-    background-color: $fiery-rose;
-    color: $white;
-}
-
-.bg-navbar {
-    background-color: $mango-tango;
-    color: $white;
+#admin {
+    .bg-sidebar {
+        background-color: $mango-tango;
+        color: $white;
+    }
+    .bg-navbar {
+        background-color: $mango-tango;
+        color: $white;
+    }
+    .text-mango {
+        color: $mango-tango;
+    }
+    .sidebar {
+        padding: 0;
+        height: 100%;
+        position: relative;
+    }
+    a {
+        color: $white;
+    }
+    .nav-item:hover {
+        background-color: $orange-web;
+        color: $mango-tango;
+        border-left: 5px solid $white;
+    }
+    .nav-item:active {
+        background-color: $orange-web;
+        color: $mango-tango;
+        border-left: 5px solid $white;
+    }
+    .sidebar-rest {
+        position: absolute;
+        left: 0;
+        width: 25%;
+        top: 200px;
+        bottom: 0;
+        z-index: -1;
+        background-color: $mango-tango;
+    }
 }

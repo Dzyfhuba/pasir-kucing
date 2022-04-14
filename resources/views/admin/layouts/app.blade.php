@@ -21,19 +21,67 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
-    <div class="row">
-        <div class="col-2 bg-sidebar position-sticky">
-            sd
+<body id="admin">
+    <div class="nav">
+        <div class="col-3 text-center p-2 bg-white text-mango"><i class="fa-solid fa-paw h1 m-0"></i></div>
+        <div class="col p-2 bg-navbar">
+            <h1 class="m-0">Pasir Kucing</h1>
         </div>
-        <div class="col">
-            <div class="row bg-navbar">
-                asd
-            </div>
-            <div class="row">
-                @yield('content')
-            </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-3 bg-sidebar sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#aboutus" role="button"
+                        aria-expanded="false" aria-controls="aboutus">Tentang Kami</a>
+                </li>
+                <div class="collapse" id="aboutus">
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="">Sejarah</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="">Visi</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="">Misi</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="">Sertifikat</a>
+                    </li>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Layanan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Jenis Klien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Klien</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kategori Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#portfolio" role="button"
+                        aria-expanded="false" aria-controls="portfolio">Portfolio</a>
+                </li>
+                <div class="collapse" id="portfolio">
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="">Foto</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="">Video</a>
+                    </li>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontak Kami</a>
+                </li>
+            </ul>
         </div>
+        <div class="sidebar-rest"></div>
     </div>
 </body>
 

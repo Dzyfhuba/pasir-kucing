@@ -11558,3 +11558,42 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   color: inherit;
   text-decoration: none;
 }
+
+#admin .bg-sidebar {
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+}
+#admin .bg-navbar {
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+}
+#admin .text-mango {
+  color: rgb(244, 129, 63);
+}
+#admin .sidebar {
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+#admin a {
+  color: rgb(253, 253, 253);
+}
+#admin .nav-item:hover {
+  background-color: rgb(250, 163, 13);
+  color: rgb(244, 129, 63);
+  border-left: 5px solid rgb(253, 253, 253);
+}
+#admin .nav-item:active {
+  background-color: rgb(250, 163, 13);
+  color: rgb(244, 129, 63);
+  border-left: 5px solid rgb(253, 253, 253);
+}
+#admin .sidebar-rest {
+  position: absolute;
+  left: 0;
+  width: 25%;
+  top: 200px;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgb(244, 129, 63);
+}
