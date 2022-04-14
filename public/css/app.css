@@ -11502,40 +11502,59 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  border: 0.1px solid #000;
   height: 93.5vh;
-  width: 100%;
+  padding: 0 5vw;
 }
-#contact .title {
-  color: rgb(244, 129, 63);
-  margin-bottom: 70px;
-}
-#contact .content {
+#contact form .btn-color {
   background-color: rgb(244, 129, 63);
-  padding: 20px 60px;
+  border-radius: 25px;
+  color: rgb(253, 253, 253);
+}
+#contact .content-inner {
+  color: rgb(253, 253, 253);
+}
+#contact .content-inner .title {
+  margin-bottom: 70px;
+  margin: 0;
+}
+#contact .content-inner .social {
+  overflow: hidden;
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
 }
-#contact .content > .card {
-  width: 30%;
+#contact .content-inner .social li {
+  margin: 0 7.5px;
 }
-#contact .content > .card img {
-  width: 70%;
-  height: auto;
-  align-self: center;
-  padding-top: 40px;
-}
-#contact .content > .card .card-body {
+#contact .content-inner .social li .icon {
   text-align: center;
+  border: 1px solid #fff;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 16px;
+  color: rgb(253, 253, 253);
 }
-#contact .content > .all {
-  border-top: 5px solid rgb(244, 129, 63);
-  margin-top: -50px;
-  margin-bottom: 20px;
+#contact .content-inner .social li .icon:hover {
+  border: none;
+  background-color: rgb(253, 253, 253);
+}
+#contact .content-inner .social li .icon:hover * {
+  color: rgb(241, 85, 106);
 }
 
 .auth-header-color {
   background-color: rgb(244, 129, 63);
   color: rgb(253, 253, 253);
   font-weight: bold;
+}
+.auth-header-color a {
+  color: inherit;
+  text-decoration: none;
 }

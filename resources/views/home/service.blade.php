@@ -1,4 +1,4 @@
-<article id="service">
+<section id="service">
     <h1 id="title">
         Layanan Kami
     </h1>
@@ -433,4 +433,4 @@
             </div>
         </div>
     </div>
-</article>
+</section>

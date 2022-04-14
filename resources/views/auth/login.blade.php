@@ -4,7 +4,10 @@
     <div class="row justify-content-center align-content-center position-absolute w-100 h-100">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header auth-header-color">{{ __('Login') }}</div>
+                <div class="card-header auth-header-color d-flex justify-content-between">
+                    {{ __('Login') }}
+                    <a href="{{ route('register') }}">Register</a>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

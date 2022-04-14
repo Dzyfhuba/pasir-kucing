@@ -1,4 +1,4 @@
-<article id="product">
+<section id="product">
     <h1 id="title">
         Produk Siap Jual
     </h1>
@@ -18,4 +18,4 @@
             </div>
         @endfor
     </div>
-</article>
+</section>

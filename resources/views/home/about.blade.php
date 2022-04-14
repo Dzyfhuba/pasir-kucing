@@ -1,4 +1,4 @@
-<article id="about">
+<section id="about">
     <h1 class="title">
         Pasir Kucing
     </h1>
@@ -9,4 +9,4 @@
         tempat tinggal bagi kucing yang membutuhkan kamar yang nyaman. Pasir kucing
         dapat menjadi tempat tinggal bagi kucing yang membutuhkan kamar yang nyaman.
     </p>
-</article>
+</section>

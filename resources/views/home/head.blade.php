@@ -1,4 +1,4 @@
-<article id="head">
+<section id="head">
     <div class="container-md">
         <div id="content">
             <h1 id="title">Kucing Pasir</h1>
@@ -12,4 +12,4 @@
             <button class="">kenali kami lebih baik</button>
         </div>
     </div>
-</article>
+</section>

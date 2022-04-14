@@ -1,4 +1,4 @@
-$("article#product .item").each(function() {
+$("section#product .item").each(function() {
     let data = $(this).data('image');
     let wrapper = $(this).find('.wrapper');
 
