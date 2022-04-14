@@ -21,10 +21,13 @@ class AboutUsFactory extends Factory
         // recreate /certificates/ folder
         Storage::deleteDirectory('public/certificates');
         Storage::makeDirectory('public/certificates', 777, true, true);
+        // recreate /logo/ folder
+        Storage::deleteDirectory('public/logo');
+        Storage::makeDirectory('public/logo', 777, true, true);
         // faker generate some random image in array
         $certs = [];
-        for ($i = 0; $i < 3; $i++) {
-            $certs[] = $this->faker->image('public/storage/certificates', 480, 640, 'cats');
+        for ($i = 0; $i < 50; $i++) {
+            $certs[] = $this->faker->image(storage_path('app/public/certificates'), 480, 720, 'cats', false);
         }
 
         // array to string
@@ -33,7 +36,8 @@ class AboutUsFactory extends Factory
             'history' => $this->faker->paragraphs(2, true),
             'vision' => $this->faker->paragraphs(2, true),
             'mission' => $this->faker->paragraphs(2, true),
-            'certificate' => $certs,
+            'certificates' => $certs,
+            'logo' => $this->faker->image(storage_path('app/public/certificates'), 480, 720, 'cats', false),
         ];
     }
 }

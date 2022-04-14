@@ -24,5 +24,7 @@ Route::middleware(['auth', 'role:admin'])->prefix('/admin')->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin');
 
     Route::get('aboutus/{sub}', [AdminAboutUsController::class, 'index'])->name('admin.about-us');
-    Route::get('aboutus/{sub}/store', [AdminAboutUsController::class, 'store'])->name('admin.about-us.store');
+    Route::post('aboutus/{sub}/store', [AdminAboutUsController::class, 'store'])->name('admin.about-us.store');
+    Route::put('aboutus/{sub}/update', [AdminAboutUsController::class, 'update'])->name('admin.about-us.update');
+    Route::delete('aboutus/cert/{sub}/delete', [AdminAboutUsController::class, 'destroy'])->name('admin.about-us.cert.delete');
 });

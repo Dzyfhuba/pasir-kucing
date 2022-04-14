@@ -11575,7 +11575,7 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   height: 100%;
   position: relative;
 }
-#admin a {
+#admin .sidebar a {
   color: rgb(253, 253, 253);
 }
 #admin .nav-item:hover {
@@ -11606,4 +11606,18 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
 }
 #admin textarea {
   height: 70vh;
+}
+#admin table .icon {
+  background-color: #000;
+  color: rgb(253, 253, 253);
+  width: 40px;
+  height: 40px;
+  padding: inherit;
+}
+#admin table td {
+  vertical-align: middle;
+}
+#admin table td > img {
+  width: auto;
+  height: 50px;
 }

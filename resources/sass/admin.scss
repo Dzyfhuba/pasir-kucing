@@ -14,9 +14,9 @@
         padding: 0;
         height: 100%;
         position: relative;
-    }
-    a {
-        color: $white;
+        a {
+            color: $white;
+        }
     }
     .nav-item:hover {
         background-color: $orange-web;
@@ -46,5 +46,21 @@
     }
     textarea {
         height: 70vh;
+    }
+    table {
+        .icon {
+            background-color: $black;
+            color: $white;
+            width: 40px;
+            height: 40px;
+            padding: inherit;
+        }
+        td {
+            vertical-align: middle;
+            >img {
+                width: auto;
+                height: 50px;
+            }
+        }
     }
 }
