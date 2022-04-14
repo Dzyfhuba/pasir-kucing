@@ -11583,7 +11583,7 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   color: rgb(244, 129, 63);
   border-left: 5px solid rgb(253, 253, 253);
 }
-#admin .nav-item:active {
+#admin .nav-item.active {
   background-color: rgb(250, 163, 13);
   color: rgb(244, 129, 63);
   border-left: 5px solid rgb(253, 253, 253);
@@ -11596,4 +11596,14 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   bottom: 0;
   z-index: -1;
   background-color: rgb(244, 129, 63);
+}
+#admin .collapse {
+  border-bottom: 1px solid rgb(253, 253, 253);
+}
+#admin .btn-color {
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+}
+#admin textarea {
+  height: 70vh;
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\AboutUs;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,5 +20,8 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);
         // call UserSeeder
         $this->call(UserSeeder::class);
+
+        // call factory
+        AboutUs::factory(1)->create();
     }
 }
