@@ -8,7 +8,9 @@
         @elseif (Request::is('admin/aboutus/mission'))
             @include('admin.about-us.mission')
         @endif
-        <button type="submit" class="btn btn-color">Submit</button>
+        @if (!Request::is('admin/aboutus/certificate'))
+            <button type="submit" class="btn btn-color">Submit</button>
+        @endif
     </form>
 
     @if (Request::is('admin/aboutus/certificate'))

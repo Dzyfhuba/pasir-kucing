@@ -39,7 +39,12 @@ class AboutUsController extends Controller
      */
     public function store($sub, StoreAboutUsRequest $request)
     {
-        //
+        // get first aboutus
+        $aboutus = AboutUs::first();
+        // update $aboutus
+        $aboutus->update($request->all());
+        $aboutus->save();
+        return redirect()->route('admin.about-us', $sub);
     }
 
     /**

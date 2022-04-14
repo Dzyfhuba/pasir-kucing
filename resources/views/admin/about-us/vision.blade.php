@@ -1,3 +1,3 @@
 <div class="mb-3">
-    <textarea class="form-control" name="vission" id="vission">{{ $aboutus->vision }}</textarea>
+    <textarea class="form-control" name="vision" id="vision">{{ $aboutus->vision }}</textarea>
 </div>

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('history')->nullable();
             $table->text('vision')->nullable();
             $table->text('mission')->nullable();
-            $table->text('certificate')->nullable();
+            $table->string('certificate')->nullable();
             $table->timestamps();
         });
     }
