@@ -85,11 +85,8 @@ class ServiceController extends Controller
      */
     public function update(UpdateServiceRequest $request, Service $service)
     {
-        // validate if cover is img extension
-        $request->validate([
-            'cover' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-        ]);
         // update cover
+        $cover_name = $service->cover;
         if ($request->hasFile('cover')) {
             // store cover
             $cover = $request->file('cover');
