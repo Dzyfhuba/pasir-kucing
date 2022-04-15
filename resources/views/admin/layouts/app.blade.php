@@ -76,7 +76,7 @@
                     <a class="nav-link" href="{{ route('admin.client.index') }}">Klien</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kategori Portfolio</a>
+                    <a class="nav-link" href="{{ route('admin.portfoliocate.index') }}">Kategori Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#portfolio" role="button"

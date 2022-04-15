@@ -30,5 +30,7 @@ class DatabaseSeeder extends Seeder
         Service::factory(15)->create();
         $this->call(ClientCateSeeder::class);
         Client::factory(10)->create();
+
+        $this->call(PortfolioCateSeeder::class);
     }
 }
