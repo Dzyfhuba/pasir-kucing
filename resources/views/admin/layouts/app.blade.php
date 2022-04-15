@@ -70,7 +70,7 @@
                     <a class="nav-link" href="#">Produk</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Jenis Klien</a>
+                    <a class="nav-link" href="{{ route('admin.clientcate.index') }}">Jenis Klien</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Klien</a>

@@ -27,5 +27,6 @@ class DatabaseSeeder extends Seeder
         AboutUs::factory(1)->create();
         Contact::factory(1)->create();
         Service::factory(30)->create();
+        $this->call(ClientCateSeeder::class);
     }
 }
