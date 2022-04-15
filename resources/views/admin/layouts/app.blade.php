@@ -73,7 +73,7 @@
                     <a class="nav-link" href="{{ route('admin.clientcate.index') }}">Jenis Klien</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Klien</a>
+                    <a class="nav-link" href="{{ route('admin.client.index') }}">Klien</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Kategori Portfolio</a>

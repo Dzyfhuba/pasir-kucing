@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\ContactController as AdminContactController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use App\Http\Controllers\Admin\ClientCateController as AdminClientCateController;
+use App\Http\Controllers\Admin\ClientController as AdminClientController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -34,4 +35,5 @@ Route::middleware(['auth', 'role:admin'])->prefix('/admin')->name('admin.')->gro
     Route::resource('contact', AdminContactController::class);
     Route::resource('service', AdminServiceController::class);
     Route::resource('clientcate', AdminClientCateController::class);
+    Route::resource('client', AdminClientController::class);
 });
