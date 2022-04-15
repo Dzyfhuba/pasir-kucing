@@ -18,6 +18,15 @@ class AboutUsController extends Controller
     {
         $aboutus = AboutUs::first();
         // reverse order of certificates
+        // remove last comma if exist
+        $certificates = rtrim($aboutus->certificates, ',');
+        // remove first comma if exist
+        $certificates = ltrim($certificates, ',');
+
+        // remove double commas if exist and change to single comma
+        $certificates = str_replace(',,', ',', $certificates);
+        $aboutus->certificates = $certificates;
+        $aboutus->save();
         // string to array
         $aboutus->certificates = explode(',', $aboutus->certificates);
         $aboutus->certificates = array_reverse($aboutus->certificates);
@@ -102,6 +111,8 @@ class AboutUsController extends Controller
             $prevcert = $aboutus->certificates;
             // remove $request->prevCert from $prevcert
             $prevcert = str_replace($request->prevCert . ',', '', $prevcert);
+            // remove double commas if exist and change to single comma
+            $prevcert = str_replace(',,', ',', $prevcert);
             $aboutus->certificates = $prevcert . ',' . $certname;
             if ($request->hasFile('certFile')) {
                 // store $request->file('certFile') to storage_path('app/public/certificates') with $certname
@@ -127,7 +138,9 @@ class AboutUsController extends Controller
         $aboutus = AboutUs::first();
         // remove $cert from $aboutus->certificates
         $prevcert = $aboutus->certificates;
-        $prevcert = str_replace($cert . ',', '', $prevcert);
+        $prevcert = str_replace($cert, '', $prevcert);
+        // remove last comma if exists
+        $prevcert = rtrim($prevcert, ',');
         $aboutus->certificates = $prevcert;
         // remove $cert from storage_path('app/public/certificates')
         $certpath = storage_path('app/public/certificates/' . $cert);
