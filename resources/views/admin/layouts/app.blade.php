@@ -24,8 +24,22 @@
 <body id="admin">
     <div class="nav">
         <div class="col-3 text-center p-2 bg-white text-mango"><i class="fa-solid fa-paw h1 m-0"></i></div>
-        <div class="col p-2 bg-navbar">
+        <div class="col p-2 bg-navbar navbar">
             <h1 class="m-0">Pasir Kucing</h1>
+            <a id="navbarDropdown" class="bg-navbar dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" v-pre>
+                <i class="fa-solid fa-user fa-2xl"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('admin.index') }}">Admin Page</a>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            </div>
         </div>
     </div>
     <div class="row m-0 p-0">
@@ -77,11 +91,11 @@
                     </li>
                 </div>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontak Kami</a>
+                    <a class="nav-link" href="{{ route('admin.contact.index') }}">Kontak Kami</a>
                 </li>
             </ul>
+            <div class="sidebar-rest"></div>
         </div>
-        <div class="sidebar-rest"></div>
         <div class="col p-3">
             @yield('content')
         </div>

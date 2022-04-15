@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\AboutUsController as AdminAboutUsController;
+use App\Http\Controllers\Admin\AboutUsController as AdminAboutUsController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\ContactController as AdminContactController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -20,11 +21,13 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::middleware(['auth', 'role:admin'])->prefix('/admin')->group(function () {
-    Route::get('/', [AdminDashboardController::class, 'index'])->name('admin');
+Route::middleware(['auth', 'role:admin'])->prefix('/admin')->name('admin.')->group(function () {
+    Route::get('/', [AdminDashboardController::class, 'index'])->name('index');
 
-    Route::get('aboutus/{sub}', [AdminAboutUsController::class, 'index'])->name('admin.about-us');
-    Route::post('aboutus/{sub}/store', [AdminAboutUsController::class, 'store'])->name('admin.about-us.store');
-    Route::put('aboutus/{sub}/update', [AdminAboutUsController::class, 'update'])->name('admin.about-us.update');
-    Route::delete('aboutus/cert/{sub}/delete', [AdminAboutUsController::class, 'destroy'])->name('admin.about-us.cert.delete');
+    Route::get('aboutus/{sub}', [AdminAboutUsController::class, 'index'])->name('about-us');
+    Route::post('aboutus/{sub}/store', [AdminAboutUsController::class, 'store'])->name('about-us.store');
+    Route::put('aboutus/{sub}/update', [AdminAboutUsController::class, 'update'])->name('about-us.update');
+    Route::delete('aboutus/cert/{sub}/delete', [AdminAboutUsController::class, 'destroy'])->name('about-us.cert.delete');
+
+    Route::resource('contact', AdminContactController::class);
 });
