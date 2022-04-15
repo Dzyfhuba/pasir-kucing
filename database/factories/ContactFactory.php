@@ -19,7 +19,7 @@ class ContactFactory extends Factory
         return [
             'city' => $this->faker->city,
             'address' => $this->faker->address,
-            'phone' => $this->faker->phoneNumber,
+            'phone' => $this->faker->e164PhoneNumber,
             'email' => $this->faker->email,
             'twitter' => $this->faker->url,
             'facebook' => $this->faker->url,
