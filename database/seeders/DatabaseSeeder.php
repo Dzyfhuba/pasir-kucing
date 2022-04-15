@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\AboutUs;
 use App\Models\Client;
 use App\Models\Contact;
+use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -28,6 +29,7 @@ class DatabaseSeeder extends Seeder
         AboutUs::factory(1)->create();
         Contact::factory(1)->create();
         Service::factory(15)->create();
+        Product::factory(10)->create();
         $this->call(ClientCateSeeder::class);
         Client::factory(10)->create();
 
