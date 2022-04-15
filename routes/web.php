@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutUsController as AdminAboutUsController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\ContactController as AdminContactController;
+use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +31,5 @@ Route::middleware(['auth', 'role:admin'])->prefix('/admin')->name('admin.')->gro
     Route::delete('aboutus/cert/{sub}/delete', [AdminAboutUsController::class, 'destroy'])->name('about-us.cert.delete');
 
     Route::resource('contact', AdminContactController::class);
+    Route::resource('service', AdminServiceController::class);
 });

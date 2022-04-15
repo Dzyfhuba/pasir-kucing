@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\AboutUs;
 use App\Models\Contact;
+use App\Models\Service;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -25,5 +26,6 @@ class DatabaseSeeder extends Seeder
         // call factory
         AboutUs::factory(1)->create();
         Contact::factory(1)->create();
+        Service::factory(30)->create();
     }
 }

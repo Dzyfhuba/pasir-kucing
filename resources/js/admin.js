@@ -5,16 +5,9 @@ import { createPopper } from '@popperjs/core';
 // if #admin loaded
 if ($('#admin').length) {
     console.log('admin.js loaded');
-    $('#tableCert').DataTable({
-        "columnDefs": [
-            { "sClass": "dt-center", "aTargets": [0] },
-            { "sClass": "dt-center", "aTargets": [2], "bSortable": false },
-            { "sClass": "dt-center", "aTargets": [3], "bSortable": false },
-            { "sClass": "dt-center", "aTargets": [4], "bSortable": false }
-        ]
-    });
+    $('#datatable').DataTable();
 
-    document.querySelectorAll('#delete').forEach(function(e) {
+    document.querySelectorAll('#deleteCert').forEach(function(e) {
         $(e).on('click', function() {
             // confirm before delete
             if (confirm('Are you sure you want to delete this certificate?')) {
@@ -30,6 +23,33 @@ if ($('#admin').length) {
 
                 $.ajax({
                     url: '/admin/aboutus/cert/' + cert + '/delete',
+                    type: 'DELETE',
+                    success: function(result) {
+                        $(e).closest('tr').remove();
+                        console.log(result);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            }
+        });
+    });
+    document.querySelectorAll('#deleteService').forEach(function(e) {
+        $(e).on('click', function() {
+            // confirm before delete
+            if (confirm('Are you sure you want to delete this service?')) {
+                // get cert
+                let id = $(this).data('service');
+                // ajax header
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+
+                $.ajax({
+                    url: '/admin/service/' + id,
                     type: 'DELETE',
                     success: function(result) {
                         $(e).closest('tr').remove();

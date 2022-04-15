@@ -64,7 +64,7 @@
                     </li>
                 </div>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Layanan</a>
+                    <a class="nav-link" href="{{ route('admin.service.index') }}">Layanan</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Produk</a>

@@ -35,7 +35,7 @@
 </div>
 
 {{-- Certificate List --}}
-<table class="table" id="tableCert">
+<table class="table" id="datatable">
     <thead>
         <tr>
             <th>No</th>
@@ -59,7 +59,7 @@
                     </button>
                 </td>
                 <td>
-                    <button class="btn icon" id="delete" data-cert="{{ $cert }}" type="button"
+                    <button class="btn icon" id="deleteCert" data-cert="{{ $cert }}" type="button"
                         class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
                         data-bs-placement="top" data-bs-content="Top popover"><i class="fa-solid fa-xmark"></i></button>
                 </td>
