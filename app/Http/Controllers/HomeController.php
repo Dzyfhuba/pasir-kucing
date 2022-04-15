@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
 use App\Models\Contact;
+use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,7 @@ class HomeController extends Controller
         $services = Service::orderBy('id', 'desc')->get();
         $aboutus = AboutUs::first();
         $contact = Contact::first();
-        return view('home', compact('services', 'aboutus', 'contact'));
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('home', compact('services', 'aboutus', 'contact', 'products'));
     }
 }

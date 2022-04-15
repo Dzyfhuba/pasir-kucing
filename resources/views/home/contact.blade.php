@@ -43,6 +43,7 @@
                                 class="fa-brands fa-whatsapp"></i></a> </li>
                 </ul>
             </div>
+            footer
         </div>
     </div>
 </section>
