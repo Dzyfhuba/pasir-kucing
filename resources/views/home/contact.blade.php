@@ -1,4 +1,5 @@
 <section id="contact">
+    <div class="row"></div>
     <div class="content align-content-center row h-100">
         <div class="col-md text-end d-flex align-items-center">
             <div class="card">
@@ -43,7 +44,7 @@
                                 class="fa-brands fa-whatsapp"></i></a> </li>
                 </ul>
             </div>
-            footer
         </div>
     </div>
+    @include('layouts.footer')
 </section>

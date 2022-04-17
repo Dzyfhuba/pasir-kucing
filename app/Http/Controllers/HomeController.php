@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
+use App\Models\Client;
 use App\Models\Contact;
 use App\Models\Portfolio;
 use App\Models\PortfolioCate;
@@ -34,6 +35,8 @@ class HomeController extends Controller
         $products = Product::orderBy('id', 'desc')->limit(5)->get();
         $portfolios = Portfolio::orderBy('id', 'desc')->get();
         $portfolioCates = PortfolioCate::all();
+        $n_client = Client::count();
+        $n_project = Portfolio::count();
 
         // $portfolio images to array
         $portfolioImages = [];
@@ -49,6 +52,6 @@ class HomeController extends Controller
             $portfolio->images = $portfolioImages[$portfolio->id];
             return $portfolio;
         });
-        return view('home', compact('services', 'aboutus', 'contact', 'products', 'portfolios', 'portfolioCates'));
+        return view('home', compact('services', 'aboutus', 'contact', 'products', 'portfolios', 'portfolioCates', 'n_client', 'n_project'));
     }
 }
