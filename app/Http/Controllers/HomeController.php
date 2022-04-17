@@ -54,4 +54,61 @@ class HomeController extends Controller
         });
         return view('home', compact('services', 'aboutus', 'contact', 'products', 'portfolios', 'portfolioCates', 'n_client', 'n_project'));
     }
+
+    public function offer()
+    {
+        return view('offer');
+    }
+
+    public function about()
+    {
+        $aboutus = AboutUs::first();
+        return view('about', compact('aboutus'));
+    }
+
+    public function contact()
+    {
+        $contact = Contact::first();
+        return view('contact', compact('contact'));
+    }
+
+    public function service()
+    {
+        $services = Service::orderBy('id', 'desc')->get();
+        return view('service', compact('services'));
+    }
+
+    public function product()
+    {
+        $products = Product::orderBy('id', 'desc')->get();
+        return view('product', compact('products'));
+    }
+
+    public function portfolio()
+    {
+        $portfolios = Portfolio::orderBy('id', 'desc')->get();
+        $portfolioCates = PortfolioCate::all();
+        return view('portfolio', compact('portfolios', 'portfolioCates'));
+    }
+
+    public function portfolio_detail($id)
+    {
+        $portfolio = Portfolio::find($id);
+        $portfolioCates = PortfolioCate::all();
+        return view('portfolio_detail', compact('portfolio', 'portfolioCates'));
+    }
+
+    public function portfolio_cate($id)
+    {
+        $portfolioCates = PortfolioCate::all();
+        $portfolios = Portfolio::where('cate_id', $id)->orderBy('id', 'desc')->get();
+        return view('portfolio', compact('portfolios', 'portfolioCates'));
+    }
+
+    public function client()
+    {
+        $n_client = Client::count();
+        $clients = Client::orderBy('id', 'desc')->get();
+        return view('client', compact('clients', 'n_client'));
+    }
 }

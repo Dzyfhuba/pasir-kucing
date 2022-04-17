@@ -39,25 +39,32 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('home') }}">Beranda</a>
+                                <a class="nav-link{{ Request::is('/') ? ' active' : '' }}"
+                                    href="{{ route('home') }}">Beranda</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Penawaran</a>
+                                <a class="nav-link{{ Request::is('offer/*') ? ' active' : '' }}"
+                                    href="{{ route('offer') }}">Penawaran</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Tentang</a>
+                                <a class="nav-link{{ Request::is('about/*') ? ' active' : '' }}"
+                                    href="{{ route('about') }}">Tentang</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Layanan</a>
+                                <a class="nav-link{{ Request::is('service/*') ? ' active' : '' }}"
+                                    href="{{ route('service') }}">Layanan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Produk</a>
+                                <a class="nav-link{{ Request::is('product/*') ? ' active' : '' }}"
+                                    href="{{ route('product') }}">Produk</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Portofolio</a>
+                                <a class="nav-link{{ Request::is('portfolio/*') ? ' active' : '' }}"
+                                    href="{{ route('portfolio') }}">Portofolio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Klien</a>
+                                <a class="nav-link{{ Request::is('client/*') ? ' active' : '' }}"
+                                    href="{{ route('client') }}">Klien</a>
                             </li>
                         </ul>
 
