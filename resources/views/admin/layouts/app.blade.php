@@ -79,17 +79,8 @@
                     <a class="nav-link" href="{{ route('admin.portfoliocate.index') }}">Kategori Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#portfolio" role="button"
-                        aria-expanded="false" aria-controls="portfolio">Portfolio</a>
+                    <a class="nav-link" href="{{ route('admin.portfolio.index') }}">Portfolio</a>
                 </li>
-                <div class="collapse" id="portfolio">
-                    <li class="nav-item ps-3">
-                        <a class="nav-link" href="">Foto</a>
-                    </li>
-                    <li class="nav-item ps-3">
-                        <a class="nav-link" href="">Video</a>
-                    </li>
-                </div>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.contact.index') }}">Kontak Kami</a>
                 </li>

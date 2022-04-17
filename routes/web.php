@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\ClientCateController as AdminClientCateController;
 use App\Http\Controllers\Admin\ClientController as AdminClientController;
 use App\Http\Controllers\Admin\PortfolioCateController as AdminPortfolioCateController;
+use App\Http\Controllers\Admin\PortfolioController as AdminPortfolioController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -40,4 +41,5 @@ Route::middleware(['auth', 'role:admin'])->prefix('/admin')->name('admin.')->gro
     Route::resource('clientcate', AdminClientCateController::class);
     Route::resource('client', AdminClientController::class);
     Route::resource('portfoliocate', AdminPortfolioCateController::class);
+    Route::resource('portfolio', AdminPortfolioController::class);
 });

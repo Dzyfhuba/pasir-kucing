@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\AboutUs;
 use App\Models\Client;
 use App\Models\Contact;
+use App\Models\Portfolio;
 use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -34,5 +35,6 @@ class DatabaseSeeder extends Seeder
         Client::factory(10)->create();
 
         $this->call(PortfolioCateSeeder::class);
+        Portfolio::factory(40)->create();
     }
 }
