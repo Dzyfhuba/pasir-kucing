@@ -5,7 +5,9 @@ import { createPopper } from '@popperjs/core';
 // if #admin loaded
 if ($('#admin').length) {
     console.log('admin.js loaded');
-    $('#datatable').DataTable();
+    $('#datatable').DataTable({
+        responsive: true
+    });
 
     document.querySelectorAll('#deleteCert').forEach(function(e) {
         $(e).on('click', function() {

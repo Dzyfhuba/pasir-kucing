@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePortfolioRequest;
 use App\Http\Requests\UpdatePortfolioRequest;
+use App\Models\Client;
 use App\Models\Portfolio;
+use App\Models\PortfolioCate;
 
 class PortfolioController extends Controller
 {
@@ -17,9 +19,17 @@ class PortfolioController extends Controller
     public function index()
     {
         // get portfolio multiple join
-        $portfolios = Portfolio::with('category', 'client')->get();
+        $portfolios = Portfolio::with('category', 'client')->orderBy('id', 'desc')->get();
+
+        // get category portfolio id and name
+        $categories = PortfolioCate::select('id', 'name')->get();
+
+        // get client id and name
+        $clients = Client::select('id', 'name')->get();
         return view('admin.portfolio', [
             'portfolios' => $portfolios,
+            'categories' => $categories,
+            'clients' => $clients,
         ]);
     }
 
@@ -41,17 +51,25 @@ class PortfolioController extends Controller
      */
     public function store(StorePortfolioRequest $request)
     {
-        // validate
-        $request->validate([
-            'category_id' => 'required|exists:portfolio_cates,id',
-            'name' => 'required|max:255',
-            'date' => 'required|max:255',
-            'client_id' => 'required|exists:clients,id',
-            'description' => 'required|max:255',
-            'images' => 'required|max:255',
-            'video' => 'required|max:255',
-        ]);
-        dd($request->all());
+        // split string images to array to json
+        $images = explode(',', $request->images);
+        $request->merge(['images' => json_encode($images)]);
+
+        // get category and client from request
+        $category = $request->category;
+        $client = $request->client;
+
+        // remove category and client from request
+        $request->offsetUnset('category');
+        $request->offsetUnset('client');
+
+        // add category and client as id to request
+        $request->merge(['category_id' => $category]);
+        $request->merge(['client_id' => $client]);
+
+        // store
+        Portfolio::create($request->all());
+        return redirect()->route('admin.portfolio.index')->with('success', 'Create success');
     }
 
     /**
@@ -85,7 +103,25 @@ class PortfolioController extends Controller
      */
     public function update(UpdatePortfolioRequest $request, Portfolio $portfolio)
     {
-        //
+        // split string images to array to json
+        $images = explode(',', $request->images);
+        $request->merge(['images' => json_encode($images)]);
+
+        // get category and client from request
+        $category = $request->category;
+        $client = $request->client;
+
+        // remove category and client from request
+        $request->offsetUnset('category');
+        $request->offsetUnset('client');
+
+        // add category and client as id to request
+        $request->merge(['category_id' => $category]);
+        $request->merge(['client_id' => $client]);
+        // update
+        $portfolio->update($request->all());
+        $portfolio->save();
+        return redirect()->route('admin.portfolio.index')->with('success', 'Update success');
     }
 
     /**
@@ -96,6 +132,9 @@ class PortfolioController extends Controller
      */
     public function destroy(Portfolio $portfolio)
     {
-        //
+        // delete
+        $portfolio->delete();
+        // redirect
+        return redirect()->route('admin.portfolio.index');
     }
 }

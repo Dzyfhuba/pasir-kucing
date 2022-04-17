@@ -13285,7 +13285,9 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
 #admin .sidebar {
   padding: 0;
   height: 100%;
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 #admin .sidebar a {
   color: rgb(253, 253, 253);

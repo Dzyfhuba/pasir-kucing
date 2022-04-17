@@ -16,23 +16,31 @@
                     <form action="{{ route('admin.portfolio.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
+                            <label for="category" class="form-label">Kategoru</label>
+                            <select class="form-control" name="category" id="category">
+                                <option value="" hidden disabled>Pilih Kategori</option>
+                                @foreach ($categories as $s)
+                                    <option value="{{ $s->id }}">{{ $s->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label for="name" class="form-label">Nama Portfolio</label>
                             <input type="text" class="form-control" name="name" id="name" aria-describedby="name"
                                 placeholder="Nama Portfolio" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Deskripsi Portfolio</label>
-                            <input type="text" class="form-control" name="description" id="description"
-                                aria-describedby="description" placeholder="Deskripsi Portfolio" required>
                         </div>
                         <div class="mb-3">
                             <label for="date">Start</label>
                             <input id="date" name="date" class="form-control" type="date" />
                         </div>
                         <div class="mb-3">
-                            <label for="name" class="form-label">Klien</label>
-                            <input type="text" class="form-control" name="client" id="client" aria-describedby="client"
-                                placeholder="Klien" required>
+                            <label for="client" class="form-label">Klien</label>
+                            <select class="form-control" name="client" id="client">
+                                <option value="" hidden disabled @selected(true)>Pilih Klien</option>
+                                @foreach ($clients as $s)
+                                    <option value="{{ $s->id }}">{{ $s->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">Deskripsi Portfolio</label>
@@ -85,7 +93,12 @@
                     <td>{{ $s->date }}</td>
                     <td>{{ $s->client->name }}</td>
                     <td>{{ $s->description }}</td>
-                    <td><img src="{{ asset('storage/Portfolios/' . $s->cover) }}" alt=""></td>
+                    <td>
+                        @foreach (json_decode($s->images) as $key => $image)
+                            <a href="{{ $image }}" target="_blank">image ke {{ $key + 1 }}</a>
+                        @endforeach
+                    </td>
+                    <td><a href="{{ $s->video }}" target="_blank">video</a></td>
                     <td>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn icon" data-bs-toggle="modal"
@@ -121,33 +134,48 @@
                                     @method('PUT')
                                     @csrf
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Nama Portfolio</label>
-                                        <input type="text" class="form-control" name="name" id="name"
-                                            aria-describedby="name" placeholder="Nama Portfolio" required>
+                                        <label for="category" class="form-label">Kategoru</label>
+                                        <select class="form-control" name="category" id="category">
+                                            <option value="" hidden disabled @selected($s->category->name == '')>Pilih Kategori
+                                            </option>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}" @selected($s->category->name == $category->name)>
+                                                    {{ $category->name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Deskripsi Portfolio</label>
-                                        <input type="text" class="form-control" name="description" id="description"
-                                            aria-describedby="description" placeholder="Deskripsi Portfolio" required>
+                                        <label for="name" class="form-label">Nama Portfolio</label>
+                                        <input type="text" class="form-control" name="name" id="name"
+                                            aria-describedby="name" placeholder="Nama Portfolio"
+                                            value="{{ $s->name }}" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="date">Start</label>
-                                        <input id="date" name="date" class="form-control" type="date" />
+                                        <input id="date" name="date" class="form-control" type="date"
+                                            value="{{ $s->date }}" />
                                     </div>
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Klien</label>
-                                        <input type="text" class="form-control" name="client" id="client"
-                                            aria-describedby="client" placeholder="Klien" required>
+                                        <label for="client" class="form-label">Klien</label>
+                                        <select class="form-control" name="client" id="client">
+                                            <option value="" hidden disabled>Pilih Klien</option>
+                                            @foreach ($clients as $c)
+                                                <option value="{{ $c->id }}" @selected($s->category->name == $c->name)>
+                                                    {{ $c->name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Deskripsi Portfolio</label>
                                         <input type="text" class="form-control" name="description" id="description"
-                                            aria-describedby="description" placeholder="Deskripsi Portfolio" required>
+                                            aria-describedby="description" placeholder="Deskripsi Portfolio"
+                                            value="{{ $s->description }}" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="images" class="form-label">Gambar</label>
                                         <input type="text" class="form-control" name="images" id="images"
-                                            aria-describedby="images" placeholder="Gambar">
+                                            aria-describedby="images" placeholder="Gambar"
+                                            value="@foreach (json_decode($s->images) as $image) {{ $image }}, @endforeach">
                                         <small id="images" class="form-text text-muted">Cantumkan url gambar, pisahkan
                                             dengan koma untuk
                                             mencantumkan beberapa url gambar sekaligus.</small>
@@ -155,7 +183,7 @@
                                     <div class="mb-3">
                                         <label for="video" class="form-label">Video</label>
                                         <input type="text" class="form-control" name="video" id="video"
-                                            aria-describedby="video" placeholder="Video">
+                                            aria-describedby="video" placeholder="Video" value="{{ $s->video }}">
                                         <small id="video" class="form-text text-muted">Cantumkan url video, kolom ini hanya
                                             dapat memuat
                                             satu url video saja.</small>

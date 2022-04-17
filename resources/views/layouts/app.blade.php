@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body id="commercial">
     <div id="app">
         @if (!(Request::is('login') || Request::is('register')))
             <nav class="navbar navbar-expand-lg navbar-color fixed-top">
