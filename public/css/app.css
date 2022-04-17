@@ -13364,6 +13364,51 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   text-decoration: none;
 }
 
+#headcomp {
+  background-image: url("/storage/decoration/right-bg-decor.png"), url("/storage/decoration/kucingoren.png");
+  background-size: contain, auto 70%;
+  background-repeat: no-repeat;
+  background-position: right center, right bottom;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 992px) {
+  #headcomp {
+    background-size: contain, 50% auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #headcomp {
+    background-size: contain, 80% auto;
+  }
+}
+#headcomp #content {
+  width: 50%;
+  color: rgb(244, 129, 63);
+}
+#headcomp #content #title {
+  font-size: 5rem;
+  font-weight: bold;
+}
+#headcomp #content #description {
+  color: black;
+  font-size: 1rem;
+  font-weight: normal;
+}
+#headcomp #content button {
+  background-color: rgb(250, 163, 13);
+  color: rgb(253, 253, 253);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
 #admin .bg-sidebar {
   background-color: rgb(244, 129, 63);
   color: rgb(253, 253, 253);

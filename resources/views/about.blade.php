@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('content')
-    s
+    @include('layouts.headcomp')
 @endsection
