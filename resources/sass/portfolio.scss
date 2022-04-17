@@ -1,0 +1,73 @@
+#portfolio {
+    display: block;
+    padding: 30px 0;
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $mango-tango;
+        padding: 0 50px;
+    }
+    .list {
+        /* NOTE: style the scrollbar (CHROME/EDGE only) */
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 30%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        @include sm-screen {
+            grid-auto-columns: 100%;
+        }
+        .wrapper {
+            width: 100%;
+            height: auto;
+            scroll-snap-align: start;
+            scroll-padding-inline: 5px;
+            margin: 15px;
+            padding: 30px;
+            overflow: hidden;
+            z-index: 1;
+            .card {
+                box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 20px;
+                .title {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+                .description {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+                .btn-color {
+                    background-color: $mango-tango;
+                    color: $white;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+                .card-body {
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+        // hide scroll bar
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .porto-tabs {
+        a.nav-link {
+            color: $black;
+        }
+        @include sm-screen {
+            display: flex;
+            flex-direction: column;
+            margin: 0 5px;
+            text-align: center;
+        }
+    }
+}

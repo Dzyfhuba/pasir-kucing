@@ -1,5 +1,5 @@
 // if #commercial loaded
-if (document.getElementById("commercial")) {
+if (document.getElementById("public")) {
     // detect 200px scroll of page
     function detectScroll() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
