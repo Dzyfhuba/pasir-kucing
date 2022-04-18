@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
 use App\Models\Client;
+use App\Models\ClientCate;
 use App\Models\Contact;
 use App\Models\Portfolio;
 use App\Models\PortfolioCate;
@@ -70,7 +71,8 @@ class HomeController extends Controller
     public function contact()
     {
         $contact = Contact::first();
-        return view('contact', compact('contact'));
+        $aboutus = AboutUs::first();
+        return view('contact', compact('contact', 'aboutus'));
     }
 
     public function service()
@@ -83,14 +85,17 @@ class HomeController extends Controller
             $service->description = substr($service->description, 0, 50) . '...';
             return $service;
         });
-        return view('service', compact('services', 'contact'));
+
+        $aboutus = AboutUs::first();
+        return view('service', compact('services', 'contact', 'aboutus'));
     }
 
     public function serviceDetail($id)
     {
         $service = Service::find($id);
         $contact = Contact::first();
-        return view('service-detail', compact('service', 'contact'));
+        $aboutus = AboutUs::first();
+        return view('service-show', compact('service', 'contact', 'aboutus'));
     }
 
     public function product()
@@ -103,7 +108,17 @@ class HomeController extends Controller
             $product->description = substr($product->description, 0, 50) . '...';
             return $product;
         });
-        return view('product', compact('products', 'contact'));
+
+        $aboutus = AboutUs::first();
+        return view('product', compact('products', 'contact', 'aboutus'));
+    }
+
+    public function productDetail($id)
+    {
+        $product = Product::find($id);
+        $contact = Contact::first();
+        $aboutus = AboutUs::first();
+        return view('product-show', compact('product', 'contact', 'aboutus'));
     }
 
     public function portfolio()
@@ -127,12 +142,9 @@ class HomeController extends Controller
             return $portfolio;
         });
 
+        $aboutus = AboutUs::first();
         // replace video youtube var url = url.replace("watch?v=", "v/");
-        $portfolios = $portfolios->map(function ($portfolio) {
-            $portfolio->video = str_replace('watch?v=', 'v/', $portfolio->video);
-            return $portfolio;
-        });
-        return view('portfolio', compact('portfolios', 'portfolioCates', 'contact'));
+        return view('portfolio', compact('portfolios', 'portfolioCates', 'contact', 'aboutus'));
     }
 
     public function portfolio_detail($id)
@@ -156,6 +168,8 @@ class HomeController extends Controller
         $n_client = Client::count();
         $clients = Client::orderBy('id', 'desc')->get();
         $contact = Contact::first();
-        return view('client', compact('clients', 'n_client', 'contact'));
+        $client_cate = ClientCate::all();
+        $aboutus = AboutUs::first();
+        return view('client', compact('clients', 'n_client', 'contact', 'client_cate', 'aboutus'));
     }
 }

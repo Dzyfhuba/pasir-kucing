@@ -13462,13 +13462,36 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
 #public #about .title {
   font-weight: bold;
 }
-#public #service .card,
+#public #service .card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#public #service .card:hover {
+  cursor: pointer;
+}
+#public #service .card .icon {
+  width: 64px;
+  height: 64px;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+  font-size: x-large;
+  font-weight: bolder;
+}
+#public #service .card .card-body h4, #public #service .card .card-body .h4 {
+  font-weight: bold;
+}
 #public #product .card {
   text-align: center;
   display: flex;
   align-items: center;
 }
-#public #service .card .icon,
+#public #product .card:hover {
+  cursor: pointer;
+}
 #public #product .card .icon {
   width: 64px;
   height: 64px;
@@ -13480,17 +13503,33 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   font-size: x-large;
   font-weight: bolder;
 }
-#public #service .card .card-body .card-title,
-#public #service .card .card-body *,
 #public #product .card .card-body .card-title,
-#public #product .card .card-body * {
+#public #product .card .card-body .card-text {
   color: rgb(253, 253, 253);
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
-#public #service .card .card-body h4, #public #service .card .card-body .h4,
-#public #product .card .card-body h4,
-#public #product .card .card-body .h4 {
+#public #product .card .card-body h4, #public #product .card .card-body .h4 {
   font-weight: bold;
+}
+#public #client {
+  color: rgb(244, 129, 63);
+}
+#public #client h1, #public #client .h1 {
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+#public #client .row h1, #public #client .row .h1 {
+  font-size: calc(1.305rem + 0.66vw);
+}
+#public #client .row .card {
+  height: 200px;
+}
+#public #client .row .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 0;
 }
 
 #admin .bg-sidebar {

@@ -23,7 +23,7 @@ class ProductFactory extends Factory
         }
         return [
             'name' => $this->faker->word,
-            'description' => $this->faker->text,
+            'description' => $this->faker->paragraphs(5, true),
             'cover' => $this->faker->image(storage_path('app/public/products'), 640, 480, null, false),
         ];
     }

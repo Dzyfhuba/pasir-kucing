@@ -8,7 +8,7 @@
         <div class="row">
             @foreach ($services as $key => $service)
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="card p-3" data-aos="fade in">
+                    <div class="card p-3" data-aos="fade in" data-href="{{ $service->id }}">
                         <div class="icon">
                             {{ $key + 1 }}
                         </div>
@@ -21,4 +21,5 @@
             @endforeach
         </div>
     </div>
+    @include('home.contact')
 @endsection

@@ -46,12 +46,45 @@
             font-weight: bold;
         }
     }
-    #service,
+    #service {
+        .card {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            &:hover {
+                cursor: pointer;
+            }
+            .icon {
+                width: 64px;
+                height: 64px;
+                display: inherit;
+                align-items: center;
+                justify-content: center;
+                background-color: $mango-tango;
+                color: $white;
+                font-size: x-large;
+                font-weight: bolder;
+            }
+            .card-body {
+                // .card-title,
+                // .card-text {
+                //     color: $white;
+                //     text-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+                // }
+                h4 {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
     #product {
         .card {
             text-align: center;
             display: flex;
             align-items: center;
+            &:hover {
+                cursor: pointer;
+            }
             .icon {
                 width: 64px;
                 height: 64px;
@@ -65,12 +98,35 @@
             }
             .card-body {
                 .card-title,
-                * {
+                .card-text {
                     color: $white;
                     text-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
                 }
                 h4 {
                     font-weight: bold;
+                }
+            }
+        }
+    }
+    #client {
+        color: $mango-tango;
+        h1 {
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+        .row {
+            h1 {
+                // set font size as h2
+                font-size: calc(1.305rem + 0.66vw);
+            }
+            .card {
+                height: 200px;
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    text-align: center;
+                    padding: 0;
                 }
             }
         }

@@ -9,7 +9,8 @@
             @foreach ($products as $key => $product)
                 <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
                     <div id="product{{ $product->id }}" class="card p-3" data-aos="fade in"
-                        data-background="{{ asset('storage/products/' . $product->cover) }}">
+                        data-background="{{ asset('storage/products/' . $product->cover) }}"
+                        data-href="{{ $product->id }}">
                         <div class="icon">
                             {{ $key + 1 }}
                         </div>
@@ -22,4 +23,5 @@
             @endforeach
         </div>
     </div>
+    @include('home.contact')
 @endsection

@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('date');
             $table->unsignedBigInteger('client_id');
-            $table->text('description');
-            $table->text('images');
+            $table->longText('description');
+            $table->longText('images');
             $table->string('video');
             $table->timestamps();
 

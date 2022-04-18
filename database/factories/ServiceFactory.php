@@ -21,9 +21,10 @@ class ServiceFactory extends Factory
         if (!Storage::exists('public/services')) {
             Storage::makeDirectory('public/services', 777, true, true);
         }
+        // $this->faker->paragraphs(5)
         return [
             'name' => $this->faker->word,
-            'description' => $this->faker->text,
+            'description' => $this->faker->paragraphs(5, true),
             'cover' => $this->faker->image(storage_path('app/public/services'), 640, 480, null, false),
         ];
     }

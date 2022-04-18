@@ -113,6 +113,7 @@
         <main class="bg-white">
             @if (Request::is('/'))
                 @include('home.head')
+            @elseif(Request::is('login') || Request::is('register'))
             @else
                 @include('layouts.headcomp')
             @endif

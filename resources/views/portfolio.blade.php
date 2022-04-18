@@ -10,4 +10,5 @@
             @endforeach
         </div>
     </div>
+    @include('home.contact')
 @endsection
