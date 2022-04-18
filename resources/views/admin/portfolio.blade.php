@@ -58,8 +58,8 @@
                             <label for="video" class="form-label">Video</label>
                             <input type="text" class="form-control" name="video" id="video" aria-describedby="video"
                                 placeholder="Video">
-                            <small id="video" class="form-text text-muted">Cantumkan url video, kolom ini hanya dapat memuat
-                                satu url video saja.</small>
+                            <small id="video" class="form-text text-muted"><a
+                                    href="{{ asset('storage/decoration/embedvideo.png') }}">Cara input video</a></small>
                         </div>
                         <button type="submit" class="btn btn-color">Simpan</button>
                     </form>
@@ -68,8 +68,8 @@
         </div>
     </div>
 
-    {{-- Cervice List --}}
-    <table class="table" id="datatable">
+    {{-- Service List --}}
+    <table class="table" id="datatable" style="width: 100%">
         <thead>
             <tr>
                 <th>No</th>
@@ -98,7 +98,7 @@
                             <a href="{{ $image }}" target="_blank">image ke {{ $key + 1 }}</a>
                         @endforeach
                     </td>
-                    <td><a href="{{ $s->video }}" target="_blank">video</a></td>
+                    <td>{!! $s->video !!}</td>
                     <td>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn icon" data-bs-toggle="modal"
@@ -184,9 +184,9 @@
                                         <label for="video" class="form-label">Video</label>
                                         <input type="text" class="form-control" name="video" id="video"
                                             aria-describedby="video" placeholder="Video" value="{{ $s->video }}">
-                                        <small id="video" class="form-text text-muted">Cantumkan url video, kolom ini hanya
-                                            dapat memuat
-                                            satu url video saja.</small>
+                                        <small id="video" class="form-text text-muted"><a
+                                                href="{{ asset('storage/decoration/embedvideo.png') }}">Cara input
+                                                video</a></small>
                                     </div>
                                     <button type="submit" class="btn btn-color">Simpan</button>
                                 </form>

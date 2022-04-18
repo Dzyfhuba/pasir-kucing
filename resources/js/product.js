@@ -6,3 +6,10 @@ $("section#product .item").each(function() {
     wrapper.css('background-image', 'url(' + data + ')');
     wrapper.css('background-size', 'cover');
 });
+if (document.querySelectorAll("#public #service")) {
+    $(".card[id^='product']").each(function(e) {
+        let background = $(this).data('background');
+        $(this).css('background-image', 'url(' + background + ')');
+        $(this).css('background-size', 'contain');
+    });
+}

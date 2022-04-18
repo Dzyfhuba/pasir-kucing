@@ -67,6 +67,8 @@ class PortfolioController extends Controller
         $request->merge(['category_id' => $category]);
         $request->merge(['client_id' => $client]);
 
+        // replace 'width="" height=""' width="100%" heigth="auto" for request video
+        $request->merge(['video' => str_replace('width="" height=""', 'width="100%" heigth="auto"', $request->video)]);
         // store
         Portfolio::create($request->all());
         return redirect()->route('admin.portfolio.index')->with('success', 'Create success');

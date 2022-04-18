@@ -44,10 +44,11 @@
                     text-align: center;
                 }
                 .btn-color {
-                    background-color: $mango-tango;
-                    color: $white;
+                    background-color: rgb(244, 129, 63);
+                    color: rgb(253, 253, 253);
                     font-size: 1.2rem;
                     font-weight: bold;
+                    border-radius: 50rem !important;
                 }
             }
         }

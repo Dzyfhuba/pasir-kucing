@@ -77,13 +77,32 @@ class HomeController extends Controller
     {
         $services = Service::orderBy('id', 'desc')->get();
         $contact = Contact::first();
+
+        // limit description and add ...
+        $services = $services->map(function ($service) {
+            $service->description = substr($service->description, 0, 50) . '...';
+            return $service;
+        });
         return view('service', compact('services', 'contact'));
+    }
+
+    public function serviceDetail($id)
+    {
+        $service = Service::find($id);
+        $contact = Contact::first();
+        return view('service-detail', compact('service', 'contact'));
     }
 
     public function product()
     {
         $products = Product::orderBy('id', 'desc')->get();
         $contact = Contact::first();
+
+        // limit description and add ...
+        $products = $products->map(function ($product) {
+            $product->description = substr($product->description, 0, 50) . '...';
+            return $product;
+        });
         return view('product', compact('products', 'contact'));
     }
 
@@ -92,6 +111,27 @@ class HomeController extends Controller
         $portfolios = Portfolio::orderBy('id', 'desc')->get();
         $portfolioCates = PortfolioCate::all();
         $contact = Contact::first();
+
+        // json to array
+        $portfolioImages = [];
+        foreach ($portfolios as $portfolio) {
+            $portfolioImages[$portfolio->id] = json_decode($portfolio->images);
+            // clean the space in string
+            $portfolioImages[$portfolio->id] = str_replace(' ', '', $portfolioImages[$portfolio->id]);
+            // clean empty string
+            $portfolioImages[$portfolio->id] = array_filter($portfolioImages[$portfolio->id]);
+        }
+        // merge it to portfolio
+        $portfolios = $portfolios->map(function ($portfolio) use ($portfolioImages) {
+            $portfolio->images = $portfolioImages[$portfolio->id];
+            return $portfolio;
+        });
+
+        // replace video youtube var url = url.replace("watch?v=", "v/");
+        $portfolios = $portfolios->map(function ($portfolio) {
+            $portfolio->video = str_replace('watch?v=', 'v/', $portfolio->video);
+            return $portfolio;
+        });
         return view('portfolio', compact('portfolios', 'portfolioCates', 'contact'));
     }
 

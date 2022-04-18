@@ -36,6 +36,7 @@
             @foreach ($portfolios as $portfolio)
                 @if ($portfolio->category->id == $portfolioCate->id)
                     @foreach ($portfolio->images as $key => $image)
+                        {{-- {{ Request::is('portfolio') ? $key-- : $key }} --}}
                         @if ($key < 2)
                             <div class="wrapper">
                                 <div class="card">

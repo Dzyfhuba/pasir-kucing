@@ -46,4 +46,33 @@
             font-weight: bold;
         }
     }
+    #service,
+    #product {
+        .card {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            .icon {
+                width: 64px;
+                height: 64px;
+                display: inherit;
+                align-items: center;
+                justify-content: center;
+                background-color: $mango-tango;
+                color: $white;
+                font-size: x-large;
+                font-weight: bolder;
+            }
+            .card-body {
+                .card-title,
+                * {
+                    color: $white;
+                    text-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+                }
+                h4 {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }

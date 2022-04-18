@@ -13185,6 +13185,7 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   color: rgb(253, 253, 253);
   font-size: 1.2rem;
   font-weight: bold;
+  border-radius: 50rem !important;
 }
 #product #list::-webkit-scrollbar {
   display: none;
@@ -13459,6 +13460,36 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   margin-top: 50px;
 }
 #public #about .title {
+  font-weight: bold;
+}
+#public #service .card,
+#public #product .card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#public #service .card .icon,
+#public #product .card .icon {
+  width: 64px;
+  height: 64px;
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+  font-size: x-large;
+  font-weight: bolder;
+}
+#public #service .card .card-body .card-title,
+#public #service .card .card-body *,
+#public #product .card .card-body .card-title,
+#public #product .card .card-body * {
+  color: rgb(253, 253, 253);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+#public #service .card .card-body h4, #public #service .card .card-body .h4,
+#public #product .card .card-body h4,
+#public #product .card .card-body .h4 {
   font-weight: bold;
 }
 

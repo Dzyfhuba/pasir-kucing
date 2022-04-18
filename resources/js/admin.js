@@ -5,9 +5,22 @@ import { createPopper } from '@popperjs/core';
 // if #admin loaded
 if ($('#admin').length) {
     console.log('admin.js loaded');
-    $('#datatable').DataTable({
-        responsive: true
-    });
+
+
+    // check current route
+    let currentRoute = window.location.pathname;
+    if (currentRoute === '/admin/portfolio') {
+        // if current url is 'portfolio'
+        // get pixel value from 75% of screen
+        let width = $(window).width() * 0.7;
+        // div.dataTables_wrapper set width
+        $('#datatable').DataTable({
+            "scrollX": true
+        });
+        $('div.dataTables_wrapper').css('width', width);
+    } else {
+        $('#datatable').DataTable();
+    }
 
     document.querySelectorAll('#deleteCert').forEach(function(e) {
         $(e).on('click', function() {

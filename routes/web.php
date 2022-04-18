@@ -30,6 +30,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('offer', [HomeController::class, 'offer'])->name('offer');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('service', [HomeController::class, 'service'])->name('service');
+Route::get('service/{id}', [HomeController::class, 'serviceDetail'])->name('service.show');
 Route::get('product', [HomeController::class, 'product'])->name('product');
 Route::get('portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 Route::get('client', [HomeController::class, 'client'])->name('client');

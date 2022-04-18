@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div id="vision">
-            <h1 class="title">Vision</h1>
+            <h1 class="title">Visi</h1>
             <div class="content">
                 <div class="text">
                     <p>{{ __($aboutus->vision) }}</p>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div id="mission">
-            <h1 class="title">Mission</h1>
+            <h1 class="title">Misi</h1>
             <div class="content">
                 <div class="text">
                     <p>{{ __($aboutus->mission) }}</p>
