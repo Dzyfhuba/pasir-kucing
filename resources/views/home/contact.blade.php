@@ -1,9 +1,9 @@
-<section id="contact">
+<section id="contact" class="mt-5">
     <div class="row"></div>
-    <div class="content align-content-center row h-100">
+    <div class="content align-content-center row h-100 container-sm">
         <div class="col-md text-end d-flex align-items-center">
             <div class="card">
-                <div class="card-body text-center">
+                <div class="card-body text-center shadow">
                     {{-- masih mentah --}}
                     <form action="mailto:Alihanafi2907@gmail.com">
                         <div class="row mb-3">
@@ -25,10 +25,10 @@
         <div class="col">
             <div class="content-inner">
                 <h1 class="title">Kontak Kami</h1>
-                <p>
+                <p class="vision">
                     {{ $aboutus->vision }}
                 </p>
-                <p>
+                <p class="mission">
                     {{ $aboutus->mission }}
                 </p>
                 <ul class="social">

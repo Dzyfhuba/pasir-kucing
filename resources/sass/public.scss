@@ -1,0 +1,49 @@
+#public {
+    .container {
+        .title {
+            color: $mango-tango;
+            font-weight: bolder;
+        }
+        #vision {
+            .content {
+                >* {
+                    margin: 0 20px;
+                }
+                display: flex;
+                .preview {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        #mission {
+            .content {
+                >* {
+                    margin: 0 20px;
+                }
+                display: flex;
+                flex-direction: row-reverse;
+                .preview {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    #about {
+        background-image: url('/storage/decoration/manycat.png');
+        background-size: cover;
+        background-position: center;
+        color: $white;
+        text-align: center;
+        padding: 60px 20px;
+        margin-top: 50px;
+        .title {
+            font-weight: bold;
+        }
+    }
+}

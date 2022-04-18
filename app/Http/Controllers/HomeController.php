@@ -63,7 +63,8 @@ class HomeController extends Controller
     public function about()
     {
         $aboutus = AboutUs::first();
-        return view('about', compact('aboutus'));
+        $contact = Contact::first();
+        return view('about', compact('aboutus', 'contact'));
     }
 
     public function contact()
@@ -75,40 +76,46 @@ class HomeController extends Controller
     public function service()
     {
         $services = Service::orderBy('id', 'desc')->get();
-        return view('service', compact('services'));
+        $contact = Contact::first();
+        return view('service', compact('services', 'contact'));
     }
 
     public function product()
     {
         $products = Product::orderBy('id', 'desc')->get();
-        return view('product', compact('products'));
+        $contact = Contact::first();
+        return view('product', compact('products', 'contact'));
     }
 
     public function portfolio()
     {
         $portfolios = Portfolio::orderBy('id', 'desc')->get();
         $portfolioCates = PortfolioCate::all();
-        return view('portfolio', compact('portfolios', 'portfolioCates'));
+        $contact = Contact::first();
+        return view('portfolio', compact('portfolios', 'portfolioCates', 'contact'));
     }
 
     public function portfolio_detail($id)
     {
         $portfolio = Portfolio::find($id);
         $portfolioCates = PortfolioCate::all();
-        return view('portfolio_detail', compact('portfolio', 'portfolioCates'));
+        $contact = Contact::first();
+        return view('portfolio_detail', compact('portfolio', 'portfolioCates', 'contact'));
     }
 
     public function portfolio_cate($id)
     {
         $portfolioCates = PortfolioCate::all();
         $portfolios = Portfolio::where('cate_id', $id)->orderBy('id', 'desc')->get();
-        return view('portfolio', compact('portfolios', 'portfolioCates'));
+        $contact = Contact::first();
+        return view('portfolio', compact('portfolios', 'portfolioCates', 'contact'));
     }
 
     public function client()
     {
         $n_client = Client::count();
         $clients = Client::orderBy('id', 'desc')->get();
-        return view('client', compact('clients', 'n_client'));
+        $contact = Contact::first();
+        return view('client', compact('clients', 'n_client', 'contact'));
     }
 }

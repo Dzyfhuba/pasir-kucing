@@ -1,12 +1,14 @@
 #headcomp {
-    background-image: url("/storage/decoration/right-bg-decor.png"), url("/storage/decoration/kucingoren.png");
-    background-size: contain, auto 70%;
+    background-image: url("/storage/decoration/lying.png"), url("/storage/decoration/right-bg-decor.png");
+    background-size: auto 80%, 70% 100%;
     background-repeat: no-repeat;
-    background-position: right center, right bottom;
-    height: 100vh;
+    background-position: right 90%, center right;
+    height: 30vh;
     width: 100%;
     display: flex;
     align-items: center;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    margin-bottom: 25px;
     @include md-screen {
         background-size: contain, 50% auto;
     }
@@ -17,7 +19,7 @@
         width: 50%;
         color: $mango-tango;
         #title {
-            font-size: 5rem;
+            font-size: 3rem;
             font-weight: bold;
         }
         #description {

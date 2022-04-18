@@ -111,6 +111,11 @@
         @endif
 
         <main class="bg-white">
+            @if (Request::is('/'))
+                @include('home.head')
+            @else
+                @include('layouts.headcomp')
+            @endif
             @yield('content')
         </main>
     </div>

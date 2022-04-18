@@ -13207,8 +13207,13 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 93.5vh;
-  padding: 0 20vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact .shadow {
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 #contact form .btn-color {
   background-color: rgb(244, 129, 63);
@@ -13221,6 +13226,22 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
 #contact .content-inner .title {
   margin-bottom: 70px;
   margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  #contact .content-inner .title {
+    margin: 25px 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #contact .content-inner .vision {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1170px) {
+  #contact .content-inner .mission {
+    display: none;
+  }
 }
 #contact .content-inner .social {
   overflow: hidden;
@@ -13254,16 +13275,8 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   color: rgb(241, 85, 106);
 }
 #contact footer {
-  transform: translate(0, -100%);
-}
-#contact footer:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 1px;
-  background-color: rgb(253, 253, 253);
+  border-top: #fff solid 1px;
 }
 #contact footer > p {
   height: 25px;
@@ -13365,14 +13378,16 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
 }
 
 #headcomp {
-  background-image: url("/storage/decoration/right-bg-decor.png"), url("/storage/decoration/kucingoren.png");
-  background-size: contain, auto 70%;
+  background-image: url("/storage/decoration/lying.png"), url("/storage/decoration/right-bg-decor.png");
+  background-size: auto 80%, 70% 100%;
   background-repeat: no-repeat;
-  background-position: right center, right bottom;
-  height: 100vh;
+  background-position: right 90%, center right;
+  height: 30vh;
   width: 100%;
   display: flex;
   align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
 }
 @media only screen and (max-width: 992px) {
   #headcomp {
@@ -13389,7 +13404,7 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   color: rgb(244, 129, 63);
 }
 #headcomp #content #title {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 #headcomp #content #description {
@@ -13407,6 +13422,44 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   padding: 0.5rem;
   margin-top: 1rem;
   cursor: pointer;
+}
+
+#public .container .title {
+  color: rgb(244, 129, 63);
+  font-weight: bolder;
+}
+#public .container #vision .content {
+  display: flex;
+}
+#public .container #vision .content > * {
+  margin: 0 20px;
+}
+#public .container #vision .content .preview img {
+  width: 100%;
+  height: auto;
+}
+#public .container #mission .content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#public .container #mission .content > * {
+  margin: 0 20px;
+}
+#public .container #mission .content .preview img {
+  width: 100%;
+  height: auto;
+}
+#public #about {
+  background-image: url("/storage/decoration/manycat.png");
+  background-size: cover;
+  background-position: center;
+  color: rgb(253, 253, 253);
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 50px;
+}
+#public #about .title {
+  font-weight: bold;
 }
 
 #admin .bg-sidebar {

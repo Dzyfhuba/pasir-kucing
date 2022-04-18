@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('home.head')
     @include('home.service')
     @include('home.product')
     @include('home.about')
