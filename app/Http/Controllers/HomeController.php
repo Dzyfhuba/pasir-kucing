@@ -78,6 +78,7 @@ class HomeController extends Controller
         $offer = new Offer();
         $offer->record = $record;
         $offer->save();
+
         return redirect()->route('offer.confirmation', ['id' => $offer->id]);
     }
 

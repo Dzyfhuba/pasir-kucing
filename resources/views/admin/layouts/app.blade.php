@@ -84,6 +84,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.contact.index') }}">Kontak Kami</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.offer.index') }}">Penawaran</a>
+                </li>
             </ul>
             <div class="sidebar-rest"></div>
         </div>

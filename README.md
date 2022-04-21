@@ -50,3 +50,35 @@ php artisan storage:link
 ```shell
 php artisan serve
 ```
+
+
+# Production Mode
+1. Archive all files from root directory. If you copy immediately, it will take a very long time and sometimes not everything can be copied.
+2. Move the archive file to host directory (mostly public_html).
+3. Extract it.
+4. Create .htaccess in root directory and fill it with
+```
+Options -MultiViews -Indexes
+
+RewriteEngine On
+# Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# Handle Front Controller...
+RewriteCond %{REQUEST_URI} !(\.css|\.js|\.png|\.jpg|\.gif|robots\.txt)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+ 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(css|js|images)/(.*)$ public/$1/$2 [L,NC]
+```
+5. Try it.
