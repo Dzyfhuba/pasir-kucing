@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ClientCateController as AdminClientCateController
 use App\Http\Controllers\Admin\ClientController as AdminClientController;
 use App\Http\Controllers\Admin\PortfolioCateController as AdminPortfolioCateController;
 use App\Http\Controllers\Admin\PortfolioController as AdminPortfolioController;
+use App\Http\Controllers\Admin\OfferController as AdminOfferController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,8 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('offer', [HomeController::class, 'offer'])->name('offer');
+Route::post('offer', [HomeController::class, 'offer_store'])->name('offer.store');
+Route::get('offer/{id}', [HomeController::class, 'offer_confirmation'])->name('offer.confirmation');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('service', [HomeController::class, 'service'])->name('service');
 Route::get('service/{id}', [HomeController::class, 'serviceDetail'])->name('service.show');
@@ -51,4 +54,6 @@ Route::middleware(['auth', 'role:admin'])->prefix('/admin')->name('admin.')->gro
     Route::resource('client', AdminClientController::class);
     Route::resource('portfoliocate', AdminPortfolioCateController::class);
     Route::resource('portfolio', AdminPortfolioController::class);
+
+    Route::resource('offer', AdminOfferController::class);
 });

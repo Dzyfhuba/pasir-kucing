@@ -18,4 +18,21 @@ if (document.getElementById('public')) {
             window.location.href = `${id}/${href}`;
         })
     });
+    $("form input[type='range']").each(function(e) {
+        $(this).on('change', function(c) {
+            let a = $('#minprice').val();
+            let b = $('#maxprice').val();
+
+            if (a > b) {
+                [a, b] = [b, a];
+            }
+
+            let label = $(this).prev().find('span');
+            let value = $(this).val();
+            label.text(value);
+
+            $('#minprice').val(a);
+            $('#maxprice').val(b);
+        });
+    });
 }

@@ -6,6 +6,7 @@ use App\Models\AboutUs;
 use App\Models\Client;
 use App\Models\ClientCate;
 use App\Models\Contact;
+use App\Models\Offer;
 use App\Models\Portfolio;
 use App\Models\PortfolioCate;
 use App\Models\Product;
@@ -58,7 +59,57 @@ class HomeController extends Controller
 
     public function offer()
     {
-        return view('offer');
+        $services = Service::all();
+        $products = Product::all();
+
+        $aboutus = AboutUs::first();
+        $contact = Contact::first();
+        return view('offer', compact('services', 'products', 'aboutus', 'contact'));
+    }
+
+    public function offer_store(Request $request)
+    {
+        // remove _token
+        $request->request->remove('_token');
+
+        // convert $request->all() to json
+        $record = json_encode($request->all());
+        // save to database
+        $offer = new Offer();
+        $offer->record = $record;
+        $offer->save();
+        return redirect()->route('offer.confirmation', ['id' => $offer->id]);
+    }
+
+    public function offer_confirmation($id)
+    {
+        $aboutus = AboutUs::first();
+        $contact = Contact::first();
+
+        // get record from database
+        $offer = Offer::find($id);
+
+        // col1 is keys
+        // col2 is values
+        $record = json_decode($offer->record, true);
+        $col1 = array_keys($record);
+        $col2 = array_values($record);
+
+        // if in col2, there is a array, convert it to string separated with semi color
+        foreach ($col2 as $key => $value) {
+            if (is_array($value)) {
+                $col2[$key] = implode('; ', $value);
+            }
+        }
+
+        // combine col1 and col2
+        $record = array_combine($col1, $col2);
+        // convert record to paragraph style
+        $record = implode('<br>', array_map(function ($v, $k) {
+            return "<p><b>$k</b>: $v</p>";
+        }, $record, array_keys($record)));
+
+        return view('offer_confirmation', compact('aboutus', 'contact', 'record', 'offer', 'col1', 'col2'));
     }
 
     public function about()

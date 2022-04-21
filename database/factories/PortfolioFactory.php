@@ -30,7 +30,7 @@ class PortfolioFactory extends Factory
             'client_id' => Client::all()->random()->id,
             'description' => $this->faker->text,
             'images' => json_encode($images),
-            'video' => 'https://www.youtube.com/embed/' . rand(1, 1000) . '?autoplay=1',
+            'video' => '<iframe width="100%" height="auto" src="https://www.youtube.com/embed/gsxHhfvmPDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
         ];
     }
 }

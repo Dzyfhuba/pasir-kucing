@@ -13425,6 +13425,10 @@ nav.navbar-color .nav-item .nav-link:hover, nav.navbar-color .nav-item .nav-link
   cursor: pointer;
 }
 
+#public .btn-color {
+  background-color: rgb(244, 129, 63);
+  color: rgb(253, 253, 253);
+}
 #public .container .title {
   color: rgb(244, 129, 63);
   font-weight: bolder;
